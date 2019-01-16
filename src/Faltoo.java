@@ -12,7 +12,7 @@ public class Faltoo {
         }
         System.out.println(Arrays.toString(l1.list));
 
-        l1.remove(44);
+        l1.remove(2);
         System.out.println(Arrays.toString(l1.list));
 
     }
