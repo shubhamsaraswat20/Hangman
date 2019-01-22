@@ -33,6 +33,31 @@ public class Stack {
 
     }
 
+    int pop(){
+
+        int response = 0;
+
+        // Todo check if the array is already empty
+
+        if (!isEmpty()){
+            stackArray[topOfStack] = 0;
+            topOfStack--;
+        }
+        return response;
+
+    }
+
+    boolean isEmpty(){
+
+        boolean response = false;
+
+        if (topOfStack == -1){
+            response = true;
+        }
+        return response;
+
+    }
+
     public static void main(String[] args) {
 
         Stack stack1 = new Stack(10);
@@ -48,6 +73,15 @@ public class Stack {
         }
 
         System.out.println("-----------");
+
+        for (int length = stack1.stackArray.length - 1; length >= 0; length--) {
+            System.out.println(stack1.stackArray[length]);
+        }
+
+        System.out.println("-----------");
+
+        stack1.pop();
+        stack1.pop();
 
         for (int length = stack1.stackArray.length - 1; length >= 0; length--) {
             System.out.println(stack1.stackArray[length]);
