@@ -15,6 +15,10 @@ public class Faltoo {
         l1.remove(2);
         System.out.println(Arrays.toString(l1.list));
 
+        System.out.println(l1.isEmpty());
+
+        System.out.println(l1.isFull());
+        
     }
 
     void insert(int value){
