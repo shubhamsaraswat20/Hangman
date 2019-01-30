@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class CanteenCustomer {
 
     public static void main(String[] args) {
@@ -45,6 +43,27 @@ class Student {
 
     int rollNo;
     String name;
+
+    private int a;
+    private String b;
+
+    // getters and setters concept for private
+    public int getA() {
+        return a;
+    }
+
+    public String getB() {
+        return b;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public void setB(String b) {
+        this.b = b;
+    }
+    // getters and setters concept for private
 
     @Override
     public String toString() {
