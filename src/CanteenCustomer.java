@@ -16,6 +16,13 @@ public class CanteenCustomer {
         System.out.println(obj[0]);
 
         Student student = new Student();
+
+        // getters and setters concept for private
+        student.setA(1);
+        student.setB("Shubh");
+        System.out.println(student);
+        // getters and setters concept for private
+
         student.name = "Shubh";
         student.rollNo = 42;
 
