@@ -34,20 +34,34 @@ public class Array {
         int max = 0;
         int index = 0;
 
+        int colSum = 0;
+        int maxc = 0;
+        int indexc = 0;
+
         for (int i = 0; i < 20; i++) {
             rowSum=0;
+            colSum = 0;
             for (int i1 = 0; i1 < 20; i1++) {
                 arr3[i][i1] = (int)(Math.random() * 100);
                 rowSum = rowSum + arr3[i][i1];
+                colSum = colSum + arr3[i1][i];
             }
             if( rowSum > max ){
                 max = rowSum;
                 index = i;
             }
+
+            if( colSum > maxc ){
+                maxc = colSum;
+                indexc = i;
+            }
+
             System.out.println(" rowSum for " + i + " = " + rowSum);
+            System.out.println(" colSum for " + i + " = " + colSum);
         }
 
         System.out.println(" Highest value " + " of rowSum is: " + max + " \nAt index " + index);
+        System.out.println(" Highest value " + " of colSum is: " + maxc + " \nAt index " + indexc);
 
         for (int[] ints : arr3) {
             for (int ints1 : ints) {
