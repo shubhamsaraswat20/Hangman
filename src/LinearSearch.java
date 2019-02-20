@@ -19,7 +19,7 @@ public class LinearSearch {
         else {
             System.out.println(value + "found at index" + pos);
         }
-
+scanner.close();
     }
 
     public static int linearSearch(int[] marks, int value) {
