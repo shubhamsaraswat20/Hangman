@@ -40,8 +40,8 @@ public class MyLinkedList {
 
         LinkedList linkedList1 = new LinkedList(10 , null);
 
-
-
     }
+
+    public void display(LinkedList )
 
 }
