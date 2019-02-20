@@ -38,10 +38,8 @@ public class MyLinkedList {
 
         MyLinkedList linkedList = new MyLinkedList();
 
-        LinkedList linkedList1 = new LinkedList(10 , null);
+        LinkedList linkedList1 = new LinkedList(10, null);
 
     }
-
-    public void display(LinkedList )
 
 }
