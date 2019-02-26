@@ -54,4 +54,11 @@ public class SinglyLinkedList {
         response.append("]");
         return response.toString();
     }
+
+    private void insertHead(int data) {
+        Node newNode = new Node(data , this.head);
+        this.head = newNode;
+        size++;
+    }
+
 }
