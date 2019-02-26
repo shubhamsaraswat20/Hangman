@@ -39,7 +39,9 @@ public class SinglyLinkedList {
         SinglyLinkedList linkedList = new SinglyLinkedList();
 
         System.out.println(linkedList);
-        linkedList.insertHead(42);
+        for (int i = 0; i < 5; i++) {
+            linkedList.insertHead(i+1);
+        }
         System.out.println(linkedList);
 
     }
@@ -51,6 +53,9 @@ public class SinglyLinkedList {
         Node temp = this.head;
         while (temp != null) {
             response.append(temp.getData());
+            if (temp.next != null) {
+                response.append(" ==> ");
+            }
             temp = temp.next;
         }
         response.append("]");
