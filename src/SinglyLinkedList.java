@@ -63,8 +63,16 @@ public class SinglyLinkedList {
     }
 
     private void insertHead(int data) {
-        Node newNode = new Node(data , this.head);
-        this.head = newNode;
+        /*Node newNode = new Node(data , this.head);
+        this.head = newNode;*/
+        this.head = new Node(data , this.head);
+        size++;
+    }
+
+    private void insertAfter(int data , Node node) {
+        /*Node node1 = new Node(data , node.next);
+        node.next = node1;*/
+        node.next = new Node(data , node.next);
         size++;
     }
 
