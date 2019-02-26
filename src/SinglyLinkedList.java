@@ -39,6 +39,8 @@ public class SinglyLinkedList {
         SinglyLinkedList linkedList = new SinglyLinkedList();
 
         System.out.println(linkedList);
+        linkedList.insertHead(42);
+        System.out.println(linkedList);
 
     }
 
