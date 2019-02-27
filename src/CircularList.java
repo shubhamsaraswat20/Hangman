@@ -27,6 +27,20 @@ public class CircularList {
     @Override
     public String toString() {
         StringBuilder response = new StringBuilder();
+
+        response.append("[");
+
+        Node temp = this.head;
+
+        while (temp != null) {
+            response .append(temp.data);
+            if (temp.next != null) {
+                response.append(" ==> ");
+            }
+        }
+
+        response.append("]");
+
         return response.toString();
     }
 }
