@@ -44,7 +44,7 @@ public class SinglyLinkedList {
         }*/
         linkedList.insertHead(66);
         linkedList.insertHead(42);
-        /*linkedList.insertHead(66);*/
+        linkedList.insertHead(46);
         System.out.println(linkedList);
 
     }
@@ -90,6 +90,49 @@ public class SinglyLinkedList {
             }
             insertAfter(data , temp);
         }
+    }
+
+    private int removeHead() {
+        int response = -1;
+        Node temp = this.head;
+
+        if (temp != null) {
+            this.size--;
+            response = temp.data;
+            this.head = this.head.next;
+        }
+        return response;
+    }
+
+    private int removeAfter(Node node) {
+        int response = -1;
+        Node temp = node.next;
+
+        if (temp != null ) {
+            this.size--;
+            response = temp.data;
+            node.next = temp.next;
+            size--;
+        }
+        return response;
+    }
+
+    public int remove(int data) {
+        int response = -1;
+        Node temp = this.head;
+        if (temp.data == data) {
+            response = removeAfter(temp);
+        }
+        else {
+            while (temp != null) {
+                if (temp.data == data) {
+                    response = removeAfter(temp);
+                    break;
+                }
+                temp = temp.next;
+            }
+        }
+        return response;
     }
 
 }
